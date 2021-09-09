@@ -13,6 +13,7 @@
 		CE03601526E8A2B900766645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE03601326E8A2B900766645 /* Main.storyboard */; };
 		CE03601726E8A2BA00766645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE03601626E8A2BA00766645 /* Assets.xcassets */; };
 		CE03601A26E8A2BA00766645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE03601826E8A2BA00766645 /* LaunchScreen.storyboard */; };
+		CE03602C26E9D56F00766645 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03602B26E9D56F00766645 /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE03601626E8A2BA00766645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE03601926E8A2BA00766645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE03601B26E8A2BA00766645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE03602B26E9D56F00766645 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,46 @@
 			children = (
 				CE03600D26E8A2B900766645 /* AppDelegate.swift */,
 				CE03600F26E8A2B900766645 /* SceneDelegate.swift */,
-				CE03601126E8A2B900766645 /* ViewController.swift */,
-				CE03601326E8A2B900766645 /* Main.storyboard */,
+				CE03602726E8E56200766645 /* ApplePayService */,
+				CE03602A26E9D55B00766645 /* Models */,
+				CE03602526E8E54D00766645 /* ViewControllers */,
+				CE03602826E8E5AD00766645 /* Storyboards */,
 				CE03601626E8A2BA00766645 /* Assets.xcassets */,
-				CE03601826E8A2BA00766645 /* LaunchScreen.storyboard */,
 				CE03601B26E8A2BA00766645 /* Info.plist */,
 			);
 			path = ApplePayDemo;
+			sourceTree = "<group>";
+		};
+		CE03602526E8E54D00766645 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE03601126E8A2B900766645 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE03602726E8E56200766645 /* ApplePayService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApplePayService;
+			sourceTree = "<group>";
+		};
+		CE03602826E8E5AD00766645 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CE03601826E8A2BA00766645 /* LaunchScreen.storyboard */,
+				CE03601326E8A2B900766645 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CE03602A26E9D55B00766645 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE03602B26E9D56F00766645 /* UserInfo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE03602C26E9D56F00766645 /* UserInfo.swift in Sources */,
 				CE03601226E8A2B900766645 /* ViewController.swift in Sources */,
 				CE03600E26E8A2B900766645 /* AppDelegate.swift in Sources */,
 				CE03601026E8A2B900766645 /* SceneDelegate.swift in Sources */,
