@@ -12,6 +12,9 @@ class ViewController: UIViewController {
 
     @IBOutlet private weak var paymentStatusLabel: UILabel!
 
+    private let priceString = "Price"
+    private let kommissionString = "Kommission"
+
     private let applePayButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
 
     override func viewDidLoad() {
@@ -40,13 +43,13 @@ class ViewController: UIViewController {
     }
 
     @objc func presentPaymentVC() {
-        let product = PKPaymentSummaryItem(label: "Price:", amount: NSDecimalNumber(integerLiteral: 1000))
-        let shippingMethod = PKShippingMethod(label: "Kommission:", amount: NSDecimalNumber(integerLiteral: 200))
-        let summary = PKPaymentSummaryItem(label: "Product", amount: NSDecimalNumber(integerLiteral: 1200))
+        let poductInfo = Product.shared
+        let product = PKPaymentSummaryItem(label: priceString, amount: poductInfo.price)
+        let shippingMethod = PKShippingMethod(label: kommissionString, amount: poductInfo.kommission)
+        let summary = PKPaymentSummaryItem(label: poductInfo.productName, amount: NSDecimalNumber(decimal: (poductInfo.price as Decimal) + (poductInfo.kommission as Decimal)))
 
         let request = PKPaymentRequest()
-
-        request.currencyCode = "UAH"
+        request.currencyCode = poductInfo.currency
         request.countryCode = "UA"
         request.merchantIdentifier = "applePayDemo.com"
 
